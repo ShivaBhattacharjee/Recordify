@@ -1,0 +1,11 @@
+{
+    "name": "Recordify",
+    "version": "1.0.0",
+    "description": "Recordify - Capture, Create , Share",
+    "manifest_version": 3,
+    "author": "Shiva Bhattacharjee",
+    "action":{
+        "default_popup": "index.html",
+        "default_title": "Recordify - Capture, Create , Share"
+    }
+}
