@@ -1,0 +1,137 @@
+*{
+    font-family: poppins;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    list-style-type: none;
+    text-decoration: none;
+}
+.container{
+    background: linear-gradient(45deg,#100e1d,#070417);
+    height: 100vh;
+    width: 100%;
+    color: #fff;
+    padding: 20px;
+    overflow: hidden;
+}
+.top-Nav{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+.top-Nav .logo {
+    display: flex;
+    align-items: center; 
+    gap: 10px;
+    cursor: pointer;
+
+}
+.top-Nav .logo i{
+    font-size: 26px;
+    /* background: purple; */
+    padding: 10px;
+    border-radius: 14px;
+
+}
+.top-Nav .logo span{
+    font-size: 23px;
+    font-weight: 600;
+}
+.top-Nav .options{
+    display: flex;
+    gap: 30px;
+    font-size: 26px;
+    opacity: .5;
+}
+.top-Nav .options i{
+    cursor: pointer;
+}
+.video{
+    transform: translateY(25%);
+}
+.container .video-options{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.container .video-options h1{
+    font-size: 16px;
+}
+.container .video-options button{
+    padding: 16px;
+    text-align: left;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 17px;
+    border-radius: 12px;
+    outline: none;
+    border: 1px solid gray;
+    background: transparent;
+    color: #fff;
+}
+.video-options span{
+    color: #fff;
+    border: 2px solid gray;
+    padding: 20px;
+    text-align: center;
+    border-radius: 14px;
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    background-image: #181035;
+}
+.container .video-options p{
+    text-align: center;
+}
+
+.settings-menu,
+.share-menu{
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(40px);
+    border-radius: 14px;
+    height: 56%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    transform: translateY(-75%);
+    display: none;
+    overflow: hidden;
+    padding: 15px;
+}
+
+.settings-menu.active,
+.share-menu.active{
+    display: flex;
+}
+
+.footer{
+    display: flex;
+    padding: 20px;
+    gap: 40px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    color: #fff;
+}
+.footer .version{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-weight: 800;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+.footer .github{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-weight: 800;
+    font-size: 16px;
+    cursor: pointer;
+}
