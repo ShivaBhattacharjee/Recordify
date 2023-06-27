@@ -7,13 +7,18 @@
     list-style-type: none;
     text-decoration: none;
 }
-.container{
+body{
     background: linear-gradient(45deg,#100e1d,#070417);
     height: 100vh;
+    width: 100vw;
+}
+.container{
+    background: linear-gradient(45deg,#100e1d,#070417);
+    height: 900px;
     width: 100%;
+    border-radius: 15px;
     color: #fff;
     padding: 20px;
-    overflow: hidden;
 }
 .top-Nav{
     display: flex;
