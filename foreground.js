@@ -33,8 +33,8 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
         navigator.mediaDevices.getDisplayMedia({
             audio: true,
             video: {
-                width: 800,
-                height: 600
+                width: 1920,
+                height: 1080
             }
         }).then((stream) => {
             onStreamAccess(stream);
