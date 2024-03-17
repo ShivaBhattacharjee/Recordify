@@ -81,6 +81,7 @@ body{
     background: transparent;
     color: #fff;
     cursor: pointer;
+    z-index: 9999999999999999999999999999999999999999999999999999999999;
 }
 .video-options span{
     color: #fff;
@@ -96,6 +97,7 @@ body{
     justify-content: center;
     background-image: #181035;
     cursor: pointer;
+    z-index: 9999999999999999999999999999999999999999999999999999999999;
 }
 .container .video-options p{
     text-align: center;

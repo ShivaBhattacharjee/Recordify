@@ -1,12 +1,14 @@
 console.log("Hello from the foreground");
 
-var recorder = null;
+let recorder = null;
+
 function onStreamAccess(stream) {
     recorder = new MediaRecorder(stream);
     recorder.start();
 
     recorder.onstop = function () {
         stream.getTracks().forEach(track => track.stop());
+        recorder = null; 
     }
 
     recorder.ondataavailable = function (event) {
@@ -24,7 +26,6 @@ function onStreamAccess(stream) {
 
         URL.revokeObjectURL(videoUrl)
     }
-
 }
 
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
@@ -33,8 +34,8 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
         navigator.mediaDevices.getDisplayMedia({
             audio: true,
             video: {
-                width: {ideal: 4096},
-                height: {ideal: 2160},
+                width: { ideal: 4096 },
+                height: { ideal: 2160 },
             }
         }).then((stream) => {
             onStreamAccess(stream);
