@@ -1,13 +1,30 @@
 {
-    "name": "Recordify",
-    "version": "1.0.0",
-    "description": "Recordify - Capture, Create, Share",
-    "manifest_version": 3,
-    "action": {
-      "default_popup": "index.html",
-      "default_title": "Recordify - Capture, Create, Share"
-    },
-    "author": "Shiva Bhattacharjee",
-    "version_name": "1.0.0"
-  }
-  
+  "manifest_version": 3,
+  "version": "1.0.0",
+  "author": "Shiva Bhattacharjee",
+  "tags" : ["screen", "record", "video", "audio", "screen record", "video record", "audio record", "screen video record", "screen audio record", "video audio record", "screen video audio record", "screen video audio", "screen video", "screen audio", "video audio", "screen video audio", "screen video", "screen audio", "video audio", "screen video audio", "screen", "video"],
+  "name": "Recordify",
+  "description": "Recordify is a simple extension that allows you to record your screen and save it as a video file.",
+  "icons": {
+    "16": "/icons/icon16.png",
+    "48": "/icons/icon48.png",
+    "128": "/icons/icon128.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+  "permissions": [
+  ]
+}
