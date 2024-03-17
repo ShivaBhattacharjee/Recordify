@@ -7,8 +7,8 @@ startRecording.addEventListener("click", () => {
     chrome.tabs.sendMessage(tabs[0].id, { action: "requestRecording" }, function (response) {
       if (!chrome.runtime.lastError) {
         alert(response);
-        startRecording.disabled = true; // Disable the start button
-        stopRecording.disabled = false; // Enable the stop button
+        startRecording.disabled = true;
+        stopRecording.disabled = false;
       } else {
         alert(chrome.runtime.lastError.message || "Error couldnt start recording ");
         console.log(chrome.runtime.lastError);
@@ -22,8 +22,8 @@ stopRecording.addEventListener("click", () => {
     chrome.tabs.sendMessage(tabs[0].id, { action: "stopRecording" }, function (response) {
       if (!chrome.runtime.lastError) {
         alert(response);
-        startRecording.disabled = false; // Enable the start button
-        stopRecording.disabled = true; // Disable the stop button
+        startRecording.disabled = false;
+        stopRecording.disabled = true;
       } else {
         alert(chrome.runtime.lastError.message || "Error couldnt stop recording ");
         console.log(chrome.runtime.lastError);

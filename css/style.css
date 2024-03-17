@@ -1,4 +1,4 @@
-*{
+* {
     font-family: poppins;
     margin: 0;
     padding: 0;
@@ -7,17 +7,21 @@
     list-style-type: none;
     text-decoration: none;
 }
-body{
-    background: linear-gradient(45deg,#100e1d,#070417);
+
+body {
+    background: linear-gradient(45deg, #100e1d, #070417);
 }
-::-webkit-scrollbar{
+
+::-webkit-scrollbar {
     display: none;
 }
-.hidden{
+
+.hidden {
     display: none;
 }
-.container{
-    background: linear-gradient(45deg,#100e1d,#070417);
+
+.container {
+    background: linear-gradient(45deg, #100e1d, #070417);
     width: 440px;
     border-radius: 15px;
     color: #fff;
@@ -25,50 +29,58 @@ body{
     margin: auto;
     border-radius: 80px;
 }
-.top-Nav{
+
+.top-Nav {
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
 }
+
 .top-Nav .logo {
     display: flex;
-    align-items: center; 
+    align-items: center;
     gap: 10px;
     cursor: pointer;
 
 }
-.top-Nav .logo i{
+
+.top-Nav .logo i {
     font-size: 26px;
     /* background: purple; */
     padding: 10px;
     border-radius: 14px;
 
 }
-.top-Nav .logo span{
+
+.top-Nav .logo span {
     font-size: 23px;
     font-weight: 600;
 }
-.top-Nav .options{
+
+.top-Nav .options {
     display: flex;
     gap: 30px;
     font-size: 26px;
     opacity: .5;
     z-index: 9999999;
 }
-.top-Nav .options i{
+
+.top-Nav .options i {
     cursor: pointer;
     z-index: 999999;
 }
 
-.container .video-options{
+.container .video-options {
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
-.container .video-options h1{
+
+.container .video-options h1 {
     font-size: 16px;
 }
-.container .video-options button{
+
+.container .video-options button {
     padding: 16px;
     text-align: left;
     display: flex;
@@ -83,7 +95,8 @@ body{
     cursor: pointer;
     z-index: 9999999999999999999999999999999999999999999999999999999999;
 }
-.video-options span{
+
+.video-options span {
     color: #fff;
     border: 2px solid gray;
     padding: 20px;
@@ -99,12 +112,13 @@ body{
     cursor: pointer;
     z-index: 9999999999999999999999999999999999999999999999999999999999;
 }
-.container .video-options p{
+
+.container .video-options p {
     text-align: center;
 }
 
 .settings-menu,
-.share-menu{
+.share-menu {
     background: rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(30px);
     -webkit-backdrop-filter: blur(40px);
@@ -121,11 +135,11 @@ body{
 }
 
 .settings-menu.active,
-.share-menu.active{
+.share-menu.active {
     display: flex;
 }
 
-.footer{
+.footer {
     color: #fff;
     display: flex;
     gap: 30px;
@@ -133,7 +147,8 @@ body{
     justify-content: space-between;
     align-items: center;
 }
-.footer .version{
+
+.footer .version {
     display: flex;
     gap: 10px;
     align-items: center;
@@ -141,7 +156,8 @@ body{
     font-size: 16px;
     letter-spacing: 1px;
 }
-.footer .github{
+
+.footer .github {
     display: flex;
     gap: 10px;
     align-items: center;

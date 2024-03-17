@@ -8,7 +8,7 @@ function onStreamAccess(stream) {
 
     recorder.onstop = function () {
         stream.getTracks().forEach(track => track.stop());
-        recorder = null; 
+        recorder = null;
     }
 
     recorder.ondataavailable = function (event) {
