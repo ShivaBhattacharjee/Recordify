@@ -1,5 +1,3 @@
-console.log("Hi, I have been injected whoopie!!!")
-
 var recorder = null
 function onAccessApproved(stream) {
     recorder = new MediaRecorder(stream);
@@ -23,7 +21,10 @@ function onAccessApproved(stream) {
 
         a.style.display = "none";
         a.href = url;
-        a.download = `${Math.random()}-Recordify.webm`;
+        const currentDate = new Date();
+        const timestamp = currentDate.getTime(); // Get the current timestamp
+        const filename = `${timestamp}-Recordify.webm`;
+        a.download = filename;
         document.body.appendChild(a);
         a.click();
 
@@ -36,7 +37,7 @@ function onAccessApproved(stream) {
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 
-    if (message.action === "request_recording") {
+    if (message.action === "requestrecording") {
         console.log("requesting recording")
 
         sendResponse(`processed: ${message.action}`);

@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   startVideoButton.addEventListener("click", () => {
     chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-      chrome.tabs.sendMessage(tabs[0].id, { action: "request_recording" }, function (response) {
+      chrome.tabs.sendMessage(tabs[0].id, { action: "requestrecording" }, function (response) {
         if (!chrome.runtime.lastError) {
           console.log(response);
         } else {
