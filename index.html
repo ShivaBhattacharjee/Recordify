@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Recordify - Capture, Create , Share.</title>
 </head>
+
 <body>
     <div class="container">
         <div class="top-Nav">
@@ -22,24 +23,25 @@
                 <span>Recordify</span>
             </div>
             <div class="options">
-                <i class="fa-solid fa-share-nodes" id="shareIcon"></i>
-                <i class="fa-solid fa-gear" id="settingsIcon"></i>
+                <!-- <i class="fa-solid fa-share-nodes" id="shareIcon"></i> -->
+                <!-- <i class="fa-solid fa-gear" id="settingsIcon"></i> -->
             </div>
         </div>
         <div class="video">
             <div class="video-options">
-                <h1>Video Settings</h1>
-                <div class="video-options">
+                <!-- <h1>Video Settings</h1> -->
+                <!-- <div class="video-options">
                     <button><i class="fa-solid fa-desktop"></i>Screen Only</button>
                     <button><i class="fa-solid fa-maximize"></i>Full Screen</button>
                     <button><i class="fa-solid fa-crop-simple"></i>Crop Screen</button>
-                </div>
-                <h1>Recording Settings</h1>
-                <div class="video-options">
+                </div> -->
+                <!-- <h1>Recording Settings</h1> -->
+                <!-- <div class="video-options">
                     <button id="microphone-button"><i class="fa-solid fa-microphone"></i>No Mic Detected - Please allow
                         microphone access</button>
-                </div>
-                <span><i class="fa-solid fa-video"></i>Start Recording</span>
+                </div> -->
+                <span id="startRecording"><i class="fa-solid fa-video"></i>Start Recording</span>
+                <span id="stopRecording" class="hidden"><i class="fa-solid fa-video"></i>Stop Recording</span>
             </div>
         </div>
 
@@ -53,7 +55,7 @@
         <div class="share-menu" id="shareMenu">
             <div class="share-card">
                 <h2>Share your recording</h2>
-                    <p>Share your recordings with friends or save in cloud</p>
+                <p>Share your recordings with friends or save in cloud</p>
             </div>
         </div>
         <!-- <div class="footer">
@@ -65,7 +67,7 @@
             </div>
         </div> -->
     </div>
-    <script src="/javascript/index.js"></script>
+    <script src="./javascript/index.js"></script>
 </body>
 
 </html>

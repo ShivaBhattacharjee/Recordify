@@ -13,6 +13,9 @@ body{
 ::-webkit-scrollbar{
     display: none;
 }
+.hidden{
+    display: none;
+}
 .container{
     background: linear-gradient(45deg,#100e1d,#070417);
     width: 440px;
@@ -77,6 +80,7 @@ body{
     border: 1px solid gray;
     background: transparent;
     color: #fff;
+    cursor: pointer;
 }
 .video-options span{
     color: #fff;
@@ -91,6 +95,7 @@ body{
     align-items: center;
     justify-content: center;
     background-image: #181035;
+    cursor: pointer;
 }
 .container .video-options p{
     text-align: center;
