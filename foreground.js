@@ -36,7 +36,7 @@ function onAccessApproved(stream) {
 
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-
+    console.log("sender", sender)
     if (message.action === "requestrecording") {
         console.log("requesting recording")
 
