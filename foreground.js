@@ -1,53 +1,65 @@
-console.log("Hello from the foreground");
+console.log("Hi, I have been injected whoopie!!!")
 
-let recorder = null;
-
-function onStreamAccess(stream) {
+var recorder = null
+function onAccessApproved(stream) {
     recorder = new MediaRecorder(stream);
+
     recorder.start();
 
     recorder.onstop = function () {
-        stream.getTracks().forEach(track => track.stop());
-        recorder = null;
+        stream.getTracks().forEach(function (track) {
+            if (track.readyState === "live") {
+                track.stop()
+                recorder = null
+            }
+        })
     }
 
     recorder.ondataavailable = function (event) {
-        const videoBlob = new Blob([event.data], { type: "video/webm" });
-        const videoUrl = URL.createObjectURL(videoBlob);
-        const a = document.createElement("a");
-        a.style.display = "none";
-        a.href = videoUrl;
-        a.download = `${Math.random()}Recording.webm`;
+        let recordedBlob = event.data;
+        let url = URL.createObjectURL(recordedBlob);
 
-        document.body.appendChild(a)
+        let a = document.createElement("a");
+
+        a.style.display = "none";
+        a.href = url;
+        a.download = `${Math.random()}-Recordify.webm`;
+        document.body.appendChild(a);
         a.click();
 
         document.body.removeChild(a);
 
-        URL.revokeObjectURL(videoUrl)
+        URL.revokeObjectURL(url);
     }
 }
 
-chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-    if (request.action === "requestRecording") {
-        sendResponse(`processed: ${request.action}`);
+
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+
+    if (message.action === "request_recording") {
+        console.log("requesting recording")
+
+        sendResponse(`processed: ${message.action}`);
+
         navigator.mediaDevices.getDisplayMedia({
             audio: true,
             video: {
-                width: { ideal: 4096 },
-                height: { ideal: 2160 },
+                width: 9999999999,
+                height: 9999999999
             }
         }).then((stream) => {
-            onStreamAccess(stream);
-        }).catch((err) => {
-            alert("Error capturing ");
-            console.log(err);
+            onAccessApproved(stream)
         })
     }
 
-    if (request.action === "stopRecording") {
-        sendResponse(`processed: ${request.action}`);
-        if (!recorder) return alert("No recording to stop");
+    if (message.action === "stopvideo") {
+        console.log("stopping video");
+        sendResponse(`processed: ${message.action}`);
+        if (!recorder) return console.log("no recorder")
+
         recorder.stop();
+
+
     }
-});
+
+})

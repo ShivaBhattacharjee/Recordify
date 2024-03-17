@@ -57,18 +57,7 @@ body {
     font-weight: 600;
 }
 
-.top-Nav .options {
-    display: flex;
-    gap: 30px;
-    font-size: 26px;
-    opacity: .5;
-    z-index: 9999999;
-}
 
-.top-Nav .options i {
-    cursor: pointer;
-    z-index: 999999;
-}
 
 .container .video-options {
     display: flex;
@@ -111,57 +100,4 @@ body {
     background-image: #181035;
     cursor: pointer;
     z-index: 9999999999999999999999999999999999999999999999999999999999;
-}
-
-.container .video-options p {
-    text-align: center;
-}
-
-.settings-menu,
-.share-menu {
-    background: rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(30px);
-    -webkit-backdrop-filter: blur(40px);
-    border-radius: 14px;
-    height: 530px;
-    overflow-y: scroll;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    transform: translateY(-85vh);
-    display: none;
-    overflow: hidden;
-    padding: 15px;
-}
-
-.settings-menu.active,
-.share-menu.active {
-    display: flex;
-}
-
-.footer {
-    color: #fff;
-    display: flex;
-    gap: 30px;
-    padding: 40px;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.footer .version {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    font-weight: 800;
-    font-size: 16px;
-    letter-spacing: 1px;
-}
-
-.footer .github {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    font-weight: 800;
-    font-size: 16px;
-    cursor: pointer;
 }
